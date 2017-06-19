@@ -1,0 +1,83 @@
+<div>
+    <div class="row payment-view">
+        <div class="col-md-5 col-lg-5 visible-md visible-lg">
+            <div>
+                <p>Need help or have question?</p>
+            </div>
+            <div>
+                <p>Call customer service at <a href="tel:1-888-555-5555">1-888-555-5555</a></p>
+            </div>
+            <div>
+                <p><a href="#">Chat with one of out stylists</a></p>
+            </div>
+            <div>
+                <p><a href="#">See return and exchange policy</a></p>
+            </div>
+        </div>
+        <div class="col-md-7 col-lg-7 col-xs-12 col-sm-12">
+            <div class="row">
+                <div class="col-md-7 col-lg-5 col-xs-12 col-sm-12">
+                    <span class="text-muted transform-text">enter promotion code of gift card</span>
+                </div>
+                <div class="col-md-7 col-lg-7">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="promoCode">
+                       <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" id="applyPromo">Apply</button>
+                       </span>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    SUBTOTAL
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p class="price"><span>{{currency}}</span>{{subTotal}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    promotion code <span>{{promotionCode}}</span> applied
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 transform-text">
+                    <p class="price"><span>{{currency}}</span>{{offer}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 transform-text">
+                    estimated shopping
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 transform-text">
+                    <p class="price"><span>free</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 transform-text">
+                    estimated total
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <p class="price"><span>{{currency}}</span>{{estimatedTotal}}</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="pull-right visible-md visible-lg transform-text">
+                <span>continue shopping</span>
+                <span><button class="btn btn-primary btn-lg" type="button">CheckOut</button></span>
+            </div>
+            <div class="visible-sm visible-xs center-options transform-text">
+               <p><button class="btn btn-primary btn-lg" type="button">CheckOut</button></p>
+                <p>continue shopping</p>
+            </div>
+            <div class="pull-right visible-md visible-lg clear-fix">
+                <img src="apps/EcartDataPresenter/images/lock.jpg" alt="secure"/>
+                <span>Secure checkout. shopping is always secure and safe.</span>
+            </div>
+            <div class="visible-sm visible-xs center-options product-divider">
+                <p>Secure checkout. shopping is always secure and safe.</p>
+                <img src="apps/EcartDataPresenter/images/lock.jpg" alt="secure"/>
+            </div>
+        </div>
+    </div>
+</div>

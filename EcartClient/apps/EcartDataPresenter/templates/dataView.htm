@@ -1,0 +1,54 @@
+<div class="products" >
+    <div class="product-divider" id="product-{{p_id}}">
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xs-5 col-sm-5" role="presentation">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object" src="{{imgUrl}}" role="presentation" alt="Product">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xs-7 col-sm-7"  role="contentinfo">
+                <div class="media-body">
+                    <h4 class="media-heading transform-text"><span>{{p_variation}}</span><span class="space">{{p_name}}</span></h4>
+                    <div class="clearfix text-muted">
+                        <p>Style #: <span class="space">{{p_style}}</span></p>
+                        <p>Colour: <span class="space">{{p_selected_color.name}}</span></p>
+                    </div>
+                    <div class="clearfix operational-options visible-lg visible-md">
+                        <ul class="list-inline">
+                            <li><a href="#" data-var="editProduct" class="editProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">EDIT</a></li>
+                            <li><a href="#" data-var="removeProduct" class="removeProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">X REMOVE</a></li>
+                            <li><a href="#" data-var="saveProduct" class="saveProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">SAVE FOR LATER</a></li>
+                        </ul>
+                    </div>
+                    <div class="visible-xs visible-sm">
+                        <p>Size <span class="space">{{p_selected_size.code}}</span></p>
+                        <p>Qty<span class="space">{{p_quantity}}</span></p>
+                        <p class="price"><span>{{c_currency}}</span>{{p_price}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1 visible-lg visible-md"  role="contentinfo">
+                <p><span>{{p_selected_size.code}}</span></p>
+            </div>
+            <div class="col-md-1 visible-lg visible-md"  role="contentinfo">
+                <span>{{p_quantity}}</span>
+            </div>
+            <div class="col-md-1 visible-lg visible-md"  role="contentinfo">
+                <p class="price"><span>{{c_currency}}</span>{{p_price}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sx-12 col-sm-12 clearfix operational-options center-options visible-sm visible-xs">
+                <ul class="list-inline">
+                    <li><a href="#" data-var="editProduct"  class="editProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">EDIT</a></li>
+                    <li><a href="#" data-var="removeProduct"  class="removeProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">X REMOVE</a></li>
+                    <li><a href="#" data-var="saveProduct"  class="saveProduct" p-id="{{p_id}}" data-toggle="modal" data-target="#modal">SAVE FOR LATER</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 center-options">
+                       <p><h3><span class="space text-muted transform-text">{{product.p_name}}</span></h3></p>
+                       <span class="price-lg">{{product.c_currency}}</span><span class="price-lg">{{product.p_price}}</span>
+                       <div class="color-selector-container">
+                               {{#each product.p_available_options.colors}}
+                                   {{#ifCond product.p_selected_color "===" this.hexcode}}
+                                        <div class="color-selector selected" style=background-color:{{this.hexcode}}></div>
+                                   {{else}}
+                                        <div class="color-selector" style=background-color:{{this.hexcode}}></div>
+                                   {{/ifCond}}
+                               {{/each}}
+                       </div>
+                       <div class="center-options row">
+                           <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                               <select class="form-control" id="productQty">
+                                   {{#each product.p_available_options.sizes}}
+                                   <option value="{{this.code}}">{{this.name}}</option>
+                                   {{/each}}
+                               </select>
+                           </div>
+                           <div class="form-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                               <select class="form-control" id="productSize">
+                                   <option value="1">1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                                   <option value="6">6</option>
+                               </select>
+                           </div>
+                       </div>
+                       <p><button class="btn btn-primary btn-lg" data-dismiss="modal" type="button" id="editProductView" product-id="{{p_id}}">Edit</button></p>
+                       <p><a href="#">See product details</a></p>
+                   </div>
+                   <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 center-options" role="presentation">
+                       <img src="{{product.imgUrl}}" alt="{{product.p_name}}" role="presentation" />
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
